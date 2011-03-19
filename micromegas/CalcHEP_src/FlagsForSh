@@ -1,0 +1,54 @@
+# C compiler
+CC="gcc" 
+
+# Flags for C compiler
+CFLAGS="-fsigned-char -Wstrict-prototypes -Wimplicit  -Wmissing-prototypes"
+
+# Disposition of header files for X11 
+HX11=
+
+# Disposition of lX11  
+LX11="-lX11"
+
+# Library which supports runtime  loading of shared libraries  
+lDL="-rdynamic -ldl"
+
+# Addition flags needed to compile objet files for shared libraries
+CFLAGSD=""
+
+# C Flag which forces compilation of  shared library 
+SHARED="-shared"
+
+# FLAG to define  shared_object_name for shared library
+SONAME=
+
+#Suffix for shared libraies
+SO=so
+
+
+# Flag which defines type of numbers used in symbolic calculations 
+# it could be -DNUM_DOUBLE ,  -DNUM_LONG_LONG  -DNUM_LONG
+SNUM=-DNUM_LONG_LONG
+
+# Fortran compiler
+FC="gfortran"
+
+# Flags for Fortran compiler
+FFLAGS="-fno-automatic"
+
+# Special Fortran libraries one has to pass to C linker
+lFort="-lgfortran"
+
+# C++ compiler
+CXX="g++"
+
+CXXFLAGS=""
+
+# RANLIB 
+RANLIB="ranlib"
+
+# MAKE 
+MAKE=make        
+
+export CC CFLAGS CFLAGSD lDL LX11 SHARED SONAME SO FC FFLAGS RANLIB CXX CXXFLAGS lFort MAKE
+
